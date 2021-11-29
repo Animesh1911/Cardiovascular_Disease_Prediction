@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body style="background-color:powderblue;">
+
+<h3 style="font-family:verdana;margin-left:35%;"><strong>Cardiovascular Disease Prediction</strong></h3>
+
+<div style="
+            margin-left: 35px;
+            margin-right: 35px;
+            margin-bottom: 45px;
+            ">
+            
+  <form action="\predict" method="post">
+  
+    <label style="font-family:verdana" for="age"><strong>AGE</strong></label>
+    <input type="number" id="Age" name="Age" placeholder="Age in years" required="required">
+    
+    <label style="font-family:verdana" for="gender"><strong>GENDER</strong></label>
+    <select name="Gender" id="Gender" required="required">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+    </select>
+    
+    <label style="font-family:verdana" for="height"><strong>HEIGHT</strong></label>
+    <input type="number" id="Height" name="Height" placeholder="Height in cms" required="required">
+    
+    <label style="font-family:verdana" for="weight"><strong>WEIGHT</strong></label>
+    <input type="number" id="Weight" name="Weight" placeholder="Weight in kg" required="required">
+    
+    <label style="font-family:verdana" for="sys_bp"><strong>SYSTOLIC BLOOD PRESSURE</strong></label>
+    <input type="number" id="Sys_bp" name="Sys_bp" placeholder="Systolic BP" required="required">
+    
+    <label style="font-family:verdana" for="dia_bp"><strong>DIASTOLIC BLOOD PRESSURE</strong></label>
+    <input type="number" id="Dia_bp" name="Dia_bp" placeholder="Diastolic BP" required="required">
+    
+    <label style="font-family:verdana" for="chol_lvl"><strong>CHOLESTEROL LEVEL</strong></label>
+    <select name="Chol_lvl" id="Chol_lvl" required="required">
+        <option value="Level 1">Normal (Level 1)</option>
+        <option value="Level 2">Above Normal (Level 2)</option>
+        <option value="Level 3">High (Level 3)</option>
+    </select>
+        
+    <label style="font-family:verdana" for="gluc_lvl"><strong>GLUCOSE LEVEL</strong></label>
+    <select name="Gluc_lvl" id="Gluc_lvl" required="required">
+        <option value="Level 1">Normal (Level 1)</option>
+        <option value="Level 2">Above Normal (Level 2)</option>
+        <option value="Level 3">High (Level 3)</option>
+    </select>
+        
+    <label style="font-family:verdana" for="smoke"><strong>SMOKER</strong></label>
+    <select name="Smoke" id="Smoke" required="required">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+    
+    <label style="font-family:verdana" for="alco"><strong>ALCOHOLIC</strong></label>
+    <select name="Alco" id="Alco" required="required">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+    
+    <label style="font-family:verdana" for="active"><strong>PHYSICAL ACTIVITY</strong></label>
+    <select name="Active" id="Active" required="required">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+        
+    <input style="font-family:verdana" type="submit" value="Submit">
+  </form>
+  <h4 style="font-family:verdana">{{ prediction_text }}</h4>
+
+   <br>
+   <p style="font-family:arial"><a href="https://github.com/Animesh1911/Cardiovascular_Disease_Prediction">Github</a></p>
+</div>
+
+</body>
+</html>
